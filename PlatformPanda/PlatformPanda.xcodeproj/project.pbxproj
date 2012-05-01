@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C50DE5154D311800DB9D58 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DE4154D311800DB9D58 /* Level.m */; };
+		83C50DE9154D313200DB9D58 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DE8154D313200DB9D58 /* Element.m */; };
+		83C50DEC154D330700DB9D58 /* Graphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DEB154D330700DB9D58 /* Graphics.m */; };
+		83C50DEF154D333A00DB9D58 /* BoxGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DEE154D333A00DB9D58 /* BoxGraphics.m */; };
+		83C50DF2154D431F00DB9D58 /* TestLevel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DF1154D431F00DB9D58 /* TestLevel1.m */; };
+		83C50DF6154D448700DB9D58 /* Terrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DF5154D448700DB9D58 /* Terrain.m */; };
+		83C50DF9154D4D6500DB9D58 /* LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DF8154D4D6500DB9D58 /* LevelView.m */; };
+		83C50DFC154D5B5400DB9D58 /* Protag.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DFB154D5B5400DB9D58 /* Protag.m */; };
+		83C50DFF154D5CC200DB9D58 /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DFE154D5CC200DB9D58 /* Projectile.m */; };
 		83D9EFBB154BB1360075896C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D9EFBA154BB1360075896C /* UIKit.framework */; };
 		83D9EFBD154BB1360075896C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D9EFBC154BB1360075896C /* Foundation.framework */; };
 		83D9EFBF154BB1360075896C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D9EFBE154BB1360075896C /* CoreGraphics.framework */; };
@@ -18,6 +27,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83C50DE3154D311800DB9D58 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		83C50DE4154D311800DB9D58 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		83C50DE7154D313200DB9D58 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		83C50DE8154D313200DB9D58 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		83C50DEA154D330700DB9D58 /* Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graphics.h; sourceTree = "<group>"; };
+		83C50DEB154D330700DB9D58 /* Graphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graphics.m; sourceTree = "<group>"; };
+		83C50DED154D333A00DB9D58 /* BoxGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoxGraphics.h; path = ../BoxGraphics.h; sourceTree = "<group>"; };
+		83C50DEE154D333A00DB9D58 /* BoxGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoxGraphics.m; path = ../BoxGraphics.m; sourceTree = "<group>"; };
+		83C50DF0154D431F00DB9D58 /* TestLevel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestLevel1.h; path = ../TestLevel1.h; sourceTree = "<group>"; };
+		83C50DF1154D431F00DB9D58 /* TestLevel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestLevel1.m; path = ../TestLevel1.m; sourceTree = "<group>"; };
+		83C50DF4154D448700DB9D58 /* Terrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Terrain.h; sourceTree = "<group>"; };
+		83C50DF5154D448700DB9D58 /* Terrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Terrain.m; sourceTree = "<group>"; };
+		83C50DF7154D4D6500DB9D58 /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
+		83C50DF8154D4D6500DB9D58 /* LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelView.m; sourceTree = "<group>"; };
+		83C50DFA154D5B5400DB9D58 /* Protag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protag.h; sourceTree = "<group>"; };
+		83C50DFB154D5B5400DB9D58 /* Protag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Protag.m; sourceTree = "<group>"; };
+		83C50DFD154D5CC200DB9D58 /* Projectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Projectile.h; path = ../Projectile.h; sourceTree = "<group>"; };
+		83C50DFE154D5CC200DB9D58 /* Projectile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Projectile.m; path = ../Projectile.m; sourceTree = "<group>"; };
 		83D9EFB6154BB1360075896C /* PlatformPanda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformPanda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D9EFBA154BB1360075896C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83D9EFBC154BB1360075896C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +74,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83C50DF3154D432900DB9D58 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				83C50DF0154D431F00DB9D58 /* TestLevel1.h */,
+				83C50DF1154D431F00DB9D58 /* TestLevel1.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		83C51008154E5F1900533392 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		83D9EFAB154BB1350075896C = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +120,30 @@
 		83D9EFC0154BB1360075896C /* PlatformPanda */ = {
 			isa = PBXGroup;
 			children = (
+				83C51008154E5F1900533392 /* Resources */,
+				83C50DF3154D432900DB9D58 /* Tests */,
 				83D9EFC9154BB1360075896C /* AppDelegate.h */,
 				83D9EFCA154BB1360075896C /* AppDelegate.m */,
 				83D9EFCC154BB1360075896C /* ViewController.h */,
 				83D9EFCD154BB1360075896C /* ViewController.m */,
+				83C50DF7154D4D6500DB9D58 /* LevelView.h */,
+				83C50DF8154D4D6500DB9D58 /* LevelView.m */,
 				83D9EFCF154BB1360075896C /* ViewController.xib */,
 				83D9EFC1154BB1360075896C /* Supporting Files */,
+				83C50DE3154D311800DB9D58 /* Level.h */,
+				83C50DE4154D311800DB9D58 /* Level.m */,
+				83C50DE7154D313200DB9D58 /* Element.h */,
+				83C50DE8154D313200DB9D58 /* Element.m */,
+				83C50DFD154D5CC200DB9D58 /* Projectile.h */,
+				83C50DFE154D5CC200DB9D58 /* Projectile.m */,
+				83C50DF4154D448700DB9D58 /* Terrain.h */,
+				83C50DF5154D448700DB9D58 /* Terrain.m */,
+				83C50DEA154D330700DB9D58 /* Graphics.h */,
+				83C50DEB154D330700DB9D58 /* Graphics.m */,
+				83C50DED154D333A00DB9D58 /* BoxGraphics.h */,
+				83C50DEE154D333A00DB9D58 /* BoxGraphics.m */,
+				83C50DFA154D5B5400DB9D58 /* Protag.h */,
+				83C50DFB154D5B5400DB9D58 /* Protag.m */,
 			);
 			path = PlatformPanda;
 			sourceTree = "<group>";
@@ -164,6 +225,15 @@
 				83D9EFC7154BB1360075896C /* main.m in Sources */,
 				83D9EFCB154BB1360075896C /* AppDelegate.m in Sources */,
 				83D9EFCE154BB1360075896C /* ViewController.m in Sources */,
+				83C50DE5154D311800DB9D58 /* Level.m in Sources */,
+				83C50DE9154D313200DB9D58 /* Element.m in Sources */,
+				83C50DEC154D330700DB9D58 /* Graphics.m in Sources */,
+				83C50DEF154D333A00DB9D58 /* BoxGraphics.m in Sources */,
+				83C50DF2154D431F00DB9D58 /* TestLevel1.m in Sources */,
+				83C50DF6154D448700DB9D58 /* Terrain.m in Sources */,
+				83C50DF9154D4D6500DB9D58 /* LevelView.m in Sources */,
+				83C50DFC154D5B5400DB9D58 /* Protag.m in Sources */,
+				83C50DFF154D5CC200DB9D58 /* Projectile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +345,7 @@
 				83D9EFD6154BB1360075896C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

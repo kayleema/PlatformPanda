@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Level.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    Level* level;
+    BOOL touchControl;
+}
+
+@property BOOL touchControl;
+
+-(NSArray *)elementList;
 
 @end
