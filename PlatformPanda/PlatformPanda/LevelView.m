@@ -10,6 +10,8 @@
 #import "Element.h"
 #import "Graphics.h"
 #import "BoxGraphics.h"
+#import "ImageGraphics.h"
+#import "ImageSetGraphics.h"
 
 @implementation LevelView
 
@@ -32,10 +34,10 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     for (Element *elem in viewController.elementList){
+        CGRect drawRect = CGRectOffset(elem.bounds, 
+                                       -screenPosition.x+self.bounds.size.width/2.0, 
+                                       -screenPosition.y+self.bounds.size.height/2.0);
         if ([elem.graphics isKindOfClass:[BoxGraphics class]]) {
-            CGRect drawRect = CGRectOffset(elem.bounds, 
-                                           -screenPosition.x+self.bounds.size.width/2.0, 
-                                           -screenPosition.y+self.bounds.size.height/2.0);
             BoxGraphics *g = (BoxGraphics *)(elem.graphics);
             [g.color setFill];
             [[UIColor blackColor] setStroke];
@@ -43,6 +45,14 @@
             CGContextFillPath(context);
             CGContextAddRect(context, drawRect);
             CGContextStrokePath(context);
+        }
+        else if ([elem.graphics isKindOfClass:[ImageGraphics class]]) {
+            ImageGraphics *g = (ImageGraphics *)(elem.graphics);
+            [g.image drawInRect:drawRect];
+        }
+        else if ([elem.graphics isKindOfClass:[ImageSetGraphics class]]) {
+            ImageSetGraphics *g = (ImageSetGraphics *)(elem.graphics);
+            [g.currentImage drawInRect:drawRect];
         }
     }
     [self setNeedsDisplay];

@@ -39,10 +39,23 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     level = [[TestLevel1 alloc] init];
-    mytimer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0) target:self
-                                   selector:@selector(doFrame) userInfo:nil repeats:YES];
+    
+    [self startGame];
+    
     mytouches = [[NSMutableArray alloc] init];
     ((LevelView*)self.view).screenStiffness = 2.0;
+}
+
+- (void) startGame{
+    if ([mytimer isValid]) {
+        [mytimer invalidate];
+    }
+    mytimer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0) target:self
+                                             selector:@selector(doFrame) userInfo:nil repeats:YES];    
+}
+
+- (void) stopGame{
+    [mytimer invalidate];
 }
 
 - (NSArray*)elementList{
@@ -105,6 +118,13 @@
         touchescenter = MAX(touchescenter, 0);
         touchesright = MAX(touchesright, 0);
     }
+}
+
+- (void) startMenu{
+    UIButton *startbutton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    startbutton.bounds = CGRectMake(30, 200, self.view.bounds.size.width - 60, 50);
+    
+    [self.view addSubview:startbutton];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

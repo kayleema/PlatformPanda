@@ -18,4 +18,7 @@
 
 -(NSArray *)elementList;
 
+-(void) startGame;
+-(void) stopGame;
+
 @end

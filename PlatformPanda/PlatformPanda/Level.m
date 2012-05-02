@@ -15,6 +15,7 @@
 
 @synthesize elements;
 @synthesize protag;
+@synthesize finished;
 
 - (id)init{
     self = [super init];
@@ -63,6 +64,15 @@
             }
         }
     }
+}
+
+-(void) addElement:(Element *)elem{
+    [self.elements addObject:elem];
+    elem.mylevel = self;
+}
+
+-(void) reachedGoal{
+    
 }
 
 @end

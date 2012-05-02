@@ -14,23 +14,26 @@
 #define DIR_DOWN  3
 
 @class Graphics;
+@class Level;
 
 @interface Element : NSObject{
     CGRect bounds;
     Graphics *graphics;
+    Level *mylevel;
 }
 
-@property Graphics *graphics;
+@property (retain) Graphics *graphics;
 @property CGRect bounds;
+@property Level *mylevel;
 
 -(id) initWithBounds:(CGRect)newbounds;
-
--(id) initWithBounds:(CGRect)newbounds AndGraphics:(Graphics *)newgraphics;
 
 -(BOOL) intersectsWith:(Element *)other;
 
 -(int) push:(Element *)other;
 
 -(int) moveOutLevel;
+
+-(void) setupGraphics;
 
 @end

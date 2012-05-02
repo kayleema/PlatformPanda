@@ -14,6 +14,7 @@
 
 @synthesize bounds;
 @synthesize graphics;
+@synthesize mylevel;
 
 -(int) moveOutLevel{
     return 1;
@@ -23,18 +24,13 @@
     self = [super init];
     if(self){
         bounds = newbounds;
-        graphics = [[BoxGraphics alloc] initWithColor:[UIColor greenColor]];
+        [self setupGraphics];
     }
     return self;
 }
 
--(id) initWithBounds:(CGRect)newbounds AndGraphics:(Graphics *)newgraphics{
-    self = [super init];
-    if(self){
-        bounds = newbounds;
-        graphics = newgraphics;
-    }
-    return self;
+-(void) setupGraphics{
+    graphics = [[BoxGraphics alloc] initWithColor:[UIColor greenColor]];
 }
 
 -(BOOL) intersectsWith:(Element *)other{

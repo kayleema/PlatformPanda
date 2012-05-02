@@ -14,10 +14,10 @@
 
 - (void) loadElements{
     self.protag = [[Protag  alloc] initWithX:100 andY:0];
-    [self.elements addObject:self.protag];
-    [self.elements addObject:[[Terrain alloc] initWithBounds:CGRectMake(-50, 150, 200,  50)]];
-    [self.elements addObject:[[Terrain alloc] initWithBounds:CGRectMake(350, 150, 200,  50)]];
-    [self.elements addObject:[[Terrain alloc] initWithBounds:CGRectMake(550, 20, 100,  50)]];
+    [self addElement:self.protag];
+    [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(-50, 150, 200,  50)]];
+    [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(350, 150, 200,  50)]];
+    [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(550, 20, 100,  50)]];
 }
 
 @end
