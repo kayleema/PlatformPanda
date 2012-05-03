@@ -14,7 +14,7 @@
 @implementation Goal
 
 -(void) setupGraphics{
-    self.graphics = [[ImageGraphics alloc] initWithImageName:@"crate.png"];
+    self.graphics = [[ImageGraphics alloc] initWithImageName:@"exit.png"];
 }
 
 -(void) pushedBy:(Element*)elem inDirection:(int)direc{

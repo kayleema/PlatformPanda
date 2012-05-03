@@ -13,7 +13,6 @@
 
 @interface ViewController (){
     NSTimer * mytimer;
-    NSMutableArray *mytouches;
     int touchesleft, touchescenter, touchesright;
 }
 
@@ -22,6 +21,7 @@
 @implementation ViewController
 
 @synthesize touchControl;
+@synthesize state;
 
 - (void)viewDidUnload
 {
@@ -31,31 +31,54 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+}
+
+-(void) loadLevel{
+    level = [[TestLevel1 alloc] init];
+    
+    ((LevelView*)self.view).screenStiffness = 2.0;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    level = [[TestLevel1 alloc] init];
     
-    [self startGame];
-    
-    mytouches = [[NSMutableArray alloc] init];
-    ((LevelView*)self.view).screenStiffness = 2.0;
+    self.state = STATE_MAIN_MENU;
+    [self.view setNeedsDisplay];
+}
+
+//MENUS
+
+- (void) touchAtX:(float)x andY:(float)y{
+    switch (self.state) {
+        case STATE_MAIN_MENU:
+            [self loadLevel];
+            [self startGame];
+            break;
+        case STATE_DEAD:
+        case STATE_WON:
+            [self stopGame:STATE_MAIN_MENU];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void) startGame{
     if ([mytimer isValid]) {
         [mytimer invalidate];
     }
+    self.state = STATE_RUN;
     mytimer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0) target:self
-                                             selector:@selector(doFrame) userInfo:nil repeats:YES];    
+                                             selector:@selector(doFrame) userInfo:nil repeats:YES];
 }
 
-- (void) stopGame{
+- (void) stopGame:(int)newstate{
     [mytimer invalidate];
+    self.state = newstate;
+    [self.view setNeedsDisplay];
 }
 
 - (NSArray*)elementList{
@@ -69,6 +92,15 @@
                                   forTime:tmInt];
     [level simulateWithTimeInterval:tmInt];
     [self.view setNeedsDisplay];
+    
+    if (level.finished) {
+        if (level.dead) {
+            [self stopGame:STATE_DEAD];
+        }
+        else {
+            [self stopGame:STATE_WON];
+        }
+    }
 }
 
 - (void)touchIncrement:(UITouch *)touch{
@@ -145,6 +177,8 @@
         [self touchDecrementNow:touch];
     }
     [self processTouches];
+    [self touchAtX:[[touches anyObject] locationInView:self.view].x
+              andY:[[touches anyObject] locationInView:self.view].y];
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){

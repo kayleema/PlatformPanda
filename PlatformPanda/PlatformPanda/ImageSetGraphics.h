@@ -10,11 +10,14 @@
 
 @interface ImageSetGraphics : Graphics{
     NSMutableArray *images;
+    NSMutableArray *imagesflipped;
     int currentIndex;
+    BOOL flipped;
 }
 
 @property NSMutableArray *images;
 @property int currentIndex;
+@property BOOL flipped;
 
 
 -(id) initWithImageNames: (NSString *)firstImage, ...;

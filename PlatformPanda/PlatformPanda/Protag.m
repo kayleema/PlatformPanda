@@ -33,26 +33,28 @@
 -(void) simulateWithTimeInterval:(float)tmInt{
     [super simulateWithTimeInterval:tmInt];
     
+    if(left){
+        ((ImageSetGraphics*)self.graphics).flipped = YES;
+    }
+    else if (right) {
+        ((ImageSetGraphics*)self.graphics).flipped = NO;
+    }
     if(grounded){
         if(wasJumping){
             wasJumping = NO;
             ((ImageSetGraphics*)self.graphics).currentIndex = 0;
         }
         stepLengthElapsed += self.vx*tmInt;
-        if(stepLengthElapsed >= stepLength){
+        if((stepLengthElapsed >= stepLength) || (-stepLengthElapsed >= stepLength)){
             ((ImageSetGraphics*)self.graphics).currentIndex = (((ImageSetGraphics*)self.graphics).currentIndex + 1)%walkCycleLength;
             stepLengthElapsed = 0;
         }
-        else if(-stepLengthElapsed >= stepLength){
-            ((ImageSetGraphics*)self.graphics).currentIndex = (((ImageSetGraphics*)self.graphics).currentIndex - 1)%walkCycleLength;
-            stepLengthElapsed = 0;
-        }
         if (((ImageSetGraphics*)self.graphics).currentIndex < 0){
-            ((ImageSetGraphics*)self.graphics).currentIndex = walkCycleLength - 1;
+            ((ImageSetGraphics*)self.graphics).currentIndex = walkCycleLength - 1;//loopback
         }
     }
     else {
-        ((ImageSetGraphics*)self.graphics).currentIndex = walkCycleLength;
+        ((ImageSetGraphics*)self.graphics).currentIndex = walkCycleLength;//image used for jumping
         wasJumping = YES;
     }
     

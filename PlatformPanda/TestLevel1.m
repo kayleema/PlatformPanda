@@ -9,6 +9,7 @@
 #import "TestLevel1.h"
 #import "Protag.h"
 #import "Terrain.h"
+#import "Goal.h"
 
 @implementation TestLevel1
 
@@ -18,6 +19,9 @@
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(-50, 150, 200,  50)]];
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(350, 150, 200,  50)]];
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(550, 20, 100,  50)]];
+    [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(750, 10, 200,  50)]];
+    
+    [self addElement:[[Goal    alloc] initWithBounds:CGRectMake(950, -65, 50,  75)]];
 }
 
 @end

@@ -14,13 +14,15 @@
     float gravity;
     Protag *protag;
     BOOL finished;
+    BOOL dead;
 }
 
 @property NSMutableArray* elements;
 @property (retain) Protag* protag;
 @property BOOL finished;
+@property BOOL dead;
 
--(id) init;
+- (id) init;
 - (void) loadElements;
 - (void) simulateWithTimeInterval:(float)tmInt;
 - (void) calculateCollisions;

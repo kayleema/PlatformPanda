@@ -9,16 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "Level.h"
 
+#define STATE_MAIN_MENU 0
+#define STATE_WON 1
+#define STATE_DEAD 2
+#define STATE_RUN 3
+
 @interface ViewController : UIViewController{
     Level* level;
     BOOL touchControl;
+    int state;
 }
 
 @property BOOL touchControl;
+@property int state;
 
 -(NSArray *)elementList;
 
 -(void) startGame;
--(void) stopGame;
+-(void) stopGame:(int)newstate;
 
 @end

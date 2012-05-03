@@ -16,6 +16,7 @@
 @synthesize elements;
 @synthesize protag;
 @synthesize finished;
+@synthesize dead;
 
 - (id)init{
     self = [super init];
@@ -41,6 +42,11 @@
         }
     }
     [self calculateCollisions];
+    
+    //check protag offscreen
+    if (protag.bounds.origin.y > 5000){
+        self.finished = self.dead = YES;
+    }
 }
 
 - (void) calculateCollisions{
@@ -72,7 +78,8 @@
 }
 
 -(void) reachedGoal{
-    
+    self.finished = YES;
+    self.dead = NO;
 }
 
 @end

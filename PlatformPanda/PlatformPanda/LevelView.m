@@ -31,6 +31,23 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    switch (viewController.state) {
+        case STATE_WON:
+            [[UIImage imageNamed:@"won-land.png"] drawInRect:self.bounds];
+            break;
+        case STATE_DEAD:
+            [[UIImage imageNamed:@"dead-land.png"] drawInRect:self.bounds];
+            break;
+        case STATE_MAIN_MENU:
+            [[UIImage imageNamed:@"start-land.png"] drawInRect:self.bounds];
+            break;
+        default:
+            [self drawLevel];
+            break;
+    }
+}
+
+-(void) drawLevel{
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     for (Element *elem in viewController.elementList){
