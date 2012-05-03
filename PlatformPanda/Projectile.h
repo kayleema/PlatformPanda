@@ -15,8 +15,6 @@
 @property float vx;
 @property float vy;
 
--(id) init;
-
 -(void) simulateWithTimeInterval:(float)tmInt;
 
 @end

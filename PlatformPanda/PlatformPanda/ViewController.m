@@ -168,7 +168,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){
         [self touchIncrement:touch];
-        NSLog(@"Start: %i %i %i", touchesleft, touchescenter, touchesright);
+        //NSLog(@"Start: %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
 }
@@ -176,14 +176,14 @@
     for (UITouch *touch in touches){
         [self touchIncrement:touch];
         [self touchDecrementPrev:touch];
-        NSLog(@"Moved: %i %i %i", touchesleft, touchescenter, touchesright);
+        //NSLog(@"Moved: %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){
         [self touchDecrementPrev:touch];
-        NSLog(@"End:   %i %i %i", touchesleft, touchescenter, touchesright);
+        //NSLog(@"End:   %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
     [self touchAtX:[[touches anyObject] locationInView:self.view].x
@@ -192,7 +192,7 @@
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){
         [self touchDecrementPrev:touch];
-        NSLog(@"Cancl: %i %i %i", touchesleft, touchescenter, touchesright);
+        //NSLog(@"Cancl: %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
 }

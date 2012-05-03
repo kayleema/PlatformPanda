@@ -13,13 +13,6 @@
 @synthesize vx;
 @synthesize vy;
 
--(id) init{
-    self = [super init];
-    if(self){
-    }
-    return self;
-}
-
 -(void) simulateWithTimeInterval:(float)tmInt{
     self.bounds = CGRectMake(self.bounds.origin.x + vx*tmInt, 
                              self.bounds.origin.y + vy*tmInt, 

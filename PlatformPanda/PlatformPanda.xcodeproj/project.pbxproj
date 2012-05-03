@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831600211552A8C900B057FB /* PaceingEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 831600201552A8C900B057FB /* PaceingEnemy.m */; };
+		831600241552B23400B057FB /* backdrop-lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 831600231552B23400B057FB /* backdrop-lowres.png */; };
+		831600271552B62300B057FB /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 831600261552B62200B057FB /* Box.m */; };
 		831DA4041550932C0073D7A5 /* p1.png in Resources */ = {isa = PBXBuildFile; fileRef = 831DA3FC1550932C0073D7A5 /* p1.png */; };
 		831DA4051550932C0073D7A5 /* p2.png in Resources */ = {isa = PBXBuildFile; fileRef = 831DA3FD1550932C0073D7A5 /* p2.png */; };
 		831DA4061550932C0073D7A5 /* p3.png in Resources */ = {isa = PBXBuildFile; fileRef = 831DA3FE1550932C0073D7A5 /* p3.png */; };
@@ -28,6 +31,9 @@
 		838B2A541551E70A0049EC4A /* start-land.png in Resources */ = {isa = PBXBuildFile; fileRef = 838B2A531551E70A0049EC4A /* start-land.png */; };
 		838B2A561551EEC10049EC4A /* dead-land.png in Resources */ = {isa = PBXBuildFile; fileRef = 838B2A551551EEC10049EC4A /* dead-land.png */; };
 		838B2A581551EECA0049EC4A /* won-land.png in Resources */ = {isa = PBXBuildFile; fileRef = 838B2A571551EECA0049EC4A /* won-land.png */; };
+		838E8D21155295E80037BBB5 /* alien1.png in Resources */ = {isa = PBXBuildFile; fileRef = 838E8D1E155295E80037BBB5 /* alien1.png */; };
+		838E8D22155295E80037BBB5 /* alien2.png in Resources */ = {isa = PBXBuildFile; fileRef = 838E8D1F155295E80037BBB5 /* alien2.png */; };
+		838E8D23155295E80037BBB5 /* alien3.png in Resources */ = {isa = PBXBuildFile; fileRef = 838E8D20155295E80037BBB5 /* alien3.png */; };
 		83C50DE5154D311800DB9D58 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DE4154D311800DB9D58 /* Level.m */; };
 		83C50DE9154D313200DB9D58 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DE8154D313200DB9D58 /* Element.m */; };
 		83C50DEC154D330700DB9D58 /* Graphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C50DEB154D330700DB9D58 /* Graphics.m */; };
@@ -45,6 +51,8 @@
 		83D9EFCB154BB1360075896C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D9EFCA154BB1360075896C /* AppDelegate.m */; };
 		83D9EFCE154BB1360075896C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D9EFCD154BB1360075896C /* ViewController.m */; };
 		83D9EFD1154BB1360075896C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D9EFCF154BB1360075896C /* ViewController.xib */; };
+		83DC87AF155313B8007245CE /* Tramp.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DC87AE155313B8007245CE /* Tramp.m */; };
+		83DC87B215531566007245CE /* tramp.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DC87B115531566007245CE /* tramp.png */; };
 		83E1B0F01552061600D8C32D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E1B0EF1552061600D8C32D /* QuartzCore.framework */; };
 		83E1B0F415520A3E00D8C32D /* Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1B0F315520A3E00D8C32D /* Water.m */; };
 		83E1B0F715520A6800D8C32D /* water1x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B0F515520A6800D8C32D /* water1x1.png */; };
@@ -70,6 +78,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8316001F1552A8C900B057FB /* PaceingEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaceingEnemy.h; sourceTree = "<group>"; };
+		831600201552A8C900B057FB /* PaceingEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaceingEnemy.m; sourceTree = "<group>"; };
+		831600231552B23400B057FB /* backdrop-lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backdrop-lowres.png"; sourceTree = "<group>"; };
+		831600251552B62200B057FB /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		831600261552B62200B057FB /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		831DA3FC1550932C0073D7A5 /* p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p1.png; sourceTree = "<group>"; };
 		831DA3FD1550932C0073D7A5 /* p2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p2.png; sourceTree = "<group>"; };
 		831DA3FE1550932C0073D7A5 /* p3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p3.png; sourceTree = "<group>"; };
@@ -94,6 +107,9 @@
 		838B2A531551E70A0049EC4A /* start-land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-land.png"; sourceTree = "<group>"; };
 		838B2A551551EEC10049EC4A /* dead-land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dead-land.png"; sourceTree = "<group>"; };
 		838B2A571551EECA0049EC4A /* won-land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "won-land.png"; sourceTree = "<group>"; };
+		838E8D1E155295E80037BBB5 /* alien1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien1.png; sourceTree = "<group>"; };
+		838E8D1F155295E80037BBB5 /* alien2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien2.png; sourceTree = "<group>"; };
+		838E8D20155295E80037BBB5 /* alien3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien3.png; sourceTree = "<group>"; };
 		83C50DE3154D311800DB9D58 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		83C50DE4154D311800DB9D58 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		83C50DE7154D313200DB9D58 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
@@ -125,6 +141,9 @@
 		83D9EFCC154BB1360075896C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		83D9EFCD154BB1360075896C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		83D9EFD0154BB1360075896C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		83DC87AD155313B8007245CE /* Tramp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tramp.h; path = ../Tramp.h; sourceTree = "<group>"; };
+		83DC87AE155313B8007245CE /* Tramp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tramp.m; path = ../Tramp.m; sourceTree = "<group>"; };
+		83DC87B115531566007245CE /* tramp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tramp.png; sourceTree = "<group>"; };
 		83E1B0EF1552061600D8C32D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83E1B0F215520A3E00D8C32D /* Water.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Water.h; sourceTree = "<group>"; };
 		83E1B0F315520A3E00D8C32D /* Water.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Water.m; sourceTree = "<group>"; };
@@ -182,6 +201,7 @@
 		83C51008154E5F1900533392 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83DC87B115531566007245CE /* tramp.png */,
 				83E83C051552761B00206788 /* icon-small2.png */,
 				83E83C021552760800206788 /* icon-big.png */,
 				83E1B105155223AE00D8C32D /* backdrop.png */,
@@ -192,6 +212,7 @@
 				83E1B10F15522CED00D8C32D /* dooropen.png */,
 				83E1B11015522CED00D8C32D /* key.png */,
 				83E1B11115522CED00D8C32D /* spark.png */,
+				831600231552B23400B057FB /* backdrop-lowres.png */,
 				831DA3FC1550932C0073D7A5 /* p1.png */,
 				831DA3FD1550932C0073D7A5 /* p2.png */,
 				831DA3FE1550932C0073D7A5 /* p3.png */,
@@ -215,6 +236,9 @@
 				838B2A571551EECA0049EC4A /* won-land.png */,
 				838B2A531551E70A0049EC4A /* start-land.png */,
 				83E1B0F91552120D00D8C32D /* pd.png */,
+				838E8D1E155295E80037BBB5 /* alien1.png */,
+				838E8D1F155295E80037BBB5 /* alien2.png */,
+				838E8D20155295E80037BBB5 /* alien3.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,8 +290,12 @@
 				83C50DE8154D313200DB9D58 /* Element.m */,
 				83C50DFD154D5CC200DB9D58 /* Projectile.h */,
 				83C50DFE154D5CC200DB9D58 /* Projectile.m */,
+				831600251552B62200B057FB /* Box.h */,
+				831600261552B62200B057FB /* Box.m */,
 				83C50DF4154D448700DB9D58 /* Terrain.h */,
 				83C50DF5154D448700DB9D58 /* Terrain.m */,
+				83DC87AD155313B8007245CE /* Tramp.h */,
+				83DC87AE155313B8007245CE /* Tramp.m */,
 				83E1B0F215520A3E00D8C32D /* Water.h */,
 				83E1B0F315520A3E00D8C32D /* Water.m */,
 				83C50DEA154D330700DB9D58 /* Graphics.h */,
@@ -284,6 +312,8 @@
 				83E1B1011552213200D8C32D /* Enemy.m */,
 				83E1B109155226D100D8C32D /* BouncingEnemy.h */,
 				83E1B10A155226D100D8C32D /* BouncingEnemy.m */,
+				8316001F1552A8C900B057FB /* PaceingEnemy.h */,
+				831600201552A8C900B057FB /* PaceingEnemy.m */,
 				83E1B0FB1552195700D8C32D /* Health.h */,
 				83E1B0FC1552195700D8C32D /* Health.m */,
 				831DA41F1550A5120073D7A5 /* Goal.h */,
@@ -393,6 +423,11 @@
 				83E1B11715522CED00D8C32D /* spark.png in Resources */,
 				83E83C031552760800206788 /* icon-big.png in Resources */,
 				83E83C061552761B00206788 /* icon-small2.png in Resources */,
+				838E8D21155295E80037BBB5 /* alien1.png in Resources */,
+				838E8D22155295E80037BBB5 /* alien2.png in Resources */,
+				838E8D23155295E80037BBB5 /* alien3.png in Resources */,
+				831600241552B23400B057FB /* backdrop-lowres.png in Resources */,
+				83DC87B215531566007245CE /* tramp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +459,9 @@
 				83E1B10B155226D100D8C32D /* BouncingEnemy.m in Sources */,
 				83E1B11A15522D2A00D8C32D /* Door.m in Sources */,
 				83E1B11D15522F1700D8C32D /* Key.m in Sources */,
+				831600211552A8C900B057FB /* PaceingEnemy.m in Sources */,
+				831600271552B62300B057FB /* Box.m in Sources */,
+				83DC87AF155313B8007245CE /* Tramp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
