@@ -91,6 +91,21 @@
     CGContextAddRect(context, CGRectMake(self.bounds.size.width-120, 20, 100, 20));
     CGContextSetLineWidth(context, 2.0f);
     CGContextStrokePath(context);
+    //draw guides
+    
+    
+    [[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.2] setStroke];
+    CGContextMoveToPoint(context, 100, 0);
+    CGContextAddLineToPoint(context, 100, 10);
+    CGContextMoveToPoint(context, self.bounds.size.width-100, 0);
+    CGContextAddLineToPoint(context, self.bounds.size.width-100, 10);
+    
+    CGContextMoveToPoint(context, 100, self.bounds.size.height-10);
+    CGContextAddLineToPoint(context, 100, self.bounds.size.height);
+    CGContextMoveToPoint(context, self.bounds.size.width-100, self.bounds.size.height-10);
+    CGContextAddLineToPoint(context, self.bounds.size.width-100, self.bounds.size.height);
+    
+    CGContextStrokePath(context);
 }
 
 - (void) slideScreen:(CGPoint)target forTime:(float)tmInt{
@@ -104,7 +119,7 @@
 
 -(void) loadResources{
     frontdrop = [UIImage imageNamed:@"frontdrop.png"];
-    backdrop  = [UIImage imageNamed:@"backdrop.png" ];
+    backdrop  = [UIImage imageNamed:@"backdrop2.png" ];
 }
 
 @end

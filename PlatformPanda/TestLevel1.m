@@ -34,6 +34,7 @@
     [self addElement:self.protag];
     [self addElement:[[Water   alloc] initWithBounds:CGRectMake(-100, 150,  50,  50)]];//water
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(-50,  150, 200,  50)]];//plat 1
+    [self addElement:[[Box     alloc] initWithBounds:CGRectMake(  0,    0,  50,  50)]];//plat 1
     [self addElement:[[Water   alloc] initWithBounds:CGRectMake(150,  175, 200,  50)]];//water
     
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(350,  150, 200,  50)]];//plat2
@@ -43,6 +44,7 @@
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(550,    0, 100,  50)]];//cap
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(650,    0,  50,  50)]];//cap
     Door *door =     [[Door    alloc] initWithBounds:CGRectMake(600, -100,  50, 100)];//door
+    //[self addElement:[[Box     alloc] initWithBounds:CGRectMake(  0,    0,  50,  50)]];//plat 1
     [self addElement:door];
     key.door = door;
     [self addElement:[[Terrain alloc] initWithBounds:CGRectMake(600, -200,  50, 100)]];//door-head
