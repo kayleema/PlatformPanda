@@ -24,6 +24,7 @@
 @property int state;
 
 -(NSArray *)elementList;
+-(float) getHealth;
 
 -(void) startGame;
 -(void) stopGame:(int)newstate;

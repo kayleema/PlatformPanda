@@ -48,6 +48,8 @@
 }
 
 -(void) drawLevel{
+    //[backdrop drawInRect:self.bounds];
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     for (Element *elem in viewController.elementList){
@@ -72,7 +74,15 @@
             [g.currentImage drawInRect:drawRect];
         }
     }
-    [self setNeedsDisplay];
+    
+    
+    [[UIColor blackColor] setStroke];
+    [[UIColor redColor] setFill];
+    CGContextAddRect(context, CGRectMake(self.bounds.size.width-120, 20, [self.viewController getHealth], 20));
+    CGContextFillPath(context);
+    CGContextAddRect(context, CGRectMake(self.bounds.size.width-120, 20, 100, 20));
+    CGContextSetLineWidth(context, 2.0f);
+    CGContextStrokePath(context);
 }
 
 - (void) slideScreen:(CGPoint)target forTime:(float)tmInt{
@@ -82,6 +92,11 @@
 
 -(BOOL) isMultipleTouchEnabled{
     return YES;
+}
+
+-(void) loadResources{
+    frontdrop = [UIImage imageNamed:@"frontdrop.png"];
+    backdrop  = [UIImage imageNamed:@"backdrop.png" ];
 }
 
 @end

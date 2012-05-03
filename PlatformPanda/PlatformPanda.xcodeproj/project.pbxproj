@@ -45,6 +45,18 @@
 		83D9EFCB154BB1360075896C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D9EFCA154BB1360075896C /* AppDelegate.m */; };
 		83D9EFCE154BB1360075896C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D9EFCD154BB1360075896C /* ViewController.m */; };
 		83D9EFD1154BB1360075896C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D9EFCF154BB1360075896C /* ViewController.xib */; };
+		83E1B0F01552061600D8C32D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E1B0EF1552061600D8C32D /* QuartzCore.framework */; };
+		83E1B0F415520A3E00D8C32D /* Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1B0F315520A3E00D8C32D /* Water.m */; };
+		83E1B0F715520A6800D8C32D /* water1x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B0F515520A6800D8C32D /* water1x1.png */; };
+		83E1B0F815520A6800D8C32D /* water4x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B0F615520A6800D8C32D /* water4x1.png */; };
+		83E1B0FA1552120D00D8C32D /* pd.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B0F91552120D00D8C32D /* pd.png */; };
+		83E1B0FD1552195700D8C32D /* Health.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1B0FC1552195700D8C32D /* Health.m */; };
+		83E1B0FF15521BCB00D8C32D /* health.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B0FE15521BCB00D8C32D /* health.png */; };
+		83E1B1021552213200D8C32D /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1B1011552213200D8C32D /* Enemy.m */; };
+		83E1B1041552223A00D8C32D /* upset.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B1031552223A00D8C32D /* upset.png */; };
+		83E1B107155223AE00D8C32D /* backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B105155223AE00D8C32D /* backdrop.png */; };
+		83E1B108155223AE00D8C32D /* frontdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E1B106155223AE00D8C32D /* frontdrop.png */; };
+		83E1B10B155226D100D8C32D /* BouncingEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1B10A155226D100D8C32D /* BouncingEnemy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +115,22 @@
 		83D9EFCC154BB1360075896C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		83D9EFCD154BB1360075896C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		83D9EFD0154BB1360075896C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		83E1B0EF1552061600D8C32D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83E1B0F215520A3E00D8C32D /* Water.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Water.h; sourceTree = "<group>"; };
+		83E1B0F315520A3E00D8C32D /* Water.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Water.m; sourceTree = "<group>"; };
+		83E1B0F515520A6800D8C32D /* water1x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water1x1.png; sourceTree = "<group>"; };
+		83E1B0F615520A6800D8C32D /* water4x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water4x1.png; sourceTree = "<group>"; };
+		83E1B0F91552120D00D8C32D /* pd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd.png; sourceTree = "<group>"; };
+		83E1B0FB1552195700D8C32D /* Health.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Health.h; path = ../Health.h; sourceTree = "<group>"; };
+		83E1B0FC1552195700D8C32D /* Health.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Health.m; path = ../Health.m; sourceTree = "<group>"; };
+		83E1B0FE15521BCB00D8C32D /* health.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = health.png; sourceTree = "<group>"; };
+		83E1B1001552213200D8C32D /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		83E1B1011552213200D8C32D /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		83E1B1031552223A00D8C32D /* upset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upset.png; sourceTree = "<group>"; };
+		83E1B105155223AE00D8C32D /* backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backdrop.png; sourceTree = "<group>"; };
+		83E1B106155223AE00D8C32D /* frontdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frontdrop.png; sourceTree = "<group>"; };
+		83E1B109155226D100D8C32D /* BouncingEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncingEnemy.h; sourceTree = "<group>"; };
+		83E1B10A155226D100D8C32D /* BouncingEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncingEnemy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E1B0F01552061600D8C32D /* QuartzCore.framework in Frameworks */,
 				83D9EFBB154BB1360075896C /* UIKit.framework in Frameworks */,
 				83D9EFBD154BB1360075896C /* Foundation.framework in Frameworks */,
 				83D9EFBF154BB1360075896C /* CoreGraphics.framework in Frameworks */,
@@ -131,6 +160,8 @@
 		83C51008154E5F1900533392 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83E1B105155223AE00D8C32D /* backdrop.png */,
+				83E1B106155223AE00D8C32D /* frontdrop.png */,
 				831DA3FC1550932C0073D7A5 /* p1.png */,
 				831DA3FD1550932C0073D7A5 /* p2.png */,
 				831DA3FE1550932C0073D7A5 /* p3.png */,
@@ -140,15 +171,20 @@
 				831DA4021550932C0073D7A5 /* p7.png */,
 				831DA4031550932C0073D7A5 /* p8.png */,
 				831DA4191550A1D40073D7A5 /* pj.png */,
+				83E1B1031552223A00D8C32D /* upset.png */,
+				83E1B0FE15521BCB00D8C32D /* health.png */,
 				831DA410155097CD0073D7A5 /* rock1x1.png */,
 				831DA411155097CD0073D7A5 /* rock1x4.png */,
 				831DA412155097CD0073D7A5 /* rock4x1.png */,
 				831DA41B1550A4490073D7A5 /* rock1x2.png */,
 				831DA41C1550A4490073D7A5 /* rock2x1.png */,
+				83E1B0F515520A6800D8C32D /* water1x1.png */,
+				83E1B0F615520A6800D8C32D /* water4x1.png */,
 				838B2A4B1551CEF30049EC4A /* exit.png */,
 				838B2A551551EEC10049EC4A /* dead-land.png */,
 				838B2A571551EECA0049EC4A /* won-land.png */,
 				838B2A531551E70A0049EC4A /* start-land.png */,
+				83E1B0F91552120D00D8C32D /* pd.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -156,6 +192,7 @@
 		83D9EFAB154BB1350075896C = {
 			isa = PBXGroup;
 			children = (
+				83E1B0EF1552061600D8C32D /* QuartzCore.framework */,
 				83D9EFC0154BB1360075896C /* PlatformPanda */,
 				83D9EFB9154BB1360075896C /* Frameworks */,
 				83D9EFB7154BB1360075896C /* Products */,
@@ -201,6 +238,8 @@
 				83C50DFE154D5CC200DB9D58 /* Projectile.m */,
 				83C50DF4154D448700DB9D58 /* Terrain.h */,
 				83C50DF5154D448700DB9D58 /* Terrain.m */,
+				83E1B0F215520A3E00D8C32D /* Water.h */,
+				83E1B0F315520A3E00D8C32D /* Water.m */,
 				83C50DEA154D330700DB9D58 /* Graphics.h */,
 				83C50DEB154D330700DB9D58 /* Graphics.m */,
 				83C50DED154D333A00DB9D58 /* BoxGraphics.h */,
@@ -211,6 +250,12 @@
 				831DA4171550987E0073D7A5 /* ImageSetGraphics.m */,
 				83C50DFA154D5B5400DB9D58 /* Protag.h */,
 				83C50DFB154D5B5400DB9D58 /* Protag.m */,
+				83E1B1001552213200D8C32D /* Enemy.h */,
+				83E1B1011552213200D8C32D /* Enemy.m */,
+				83E1B109155226D100D8C32D /* BouncingEnemy.h */,
+				83E1B10A155226D100D8C32D /* BouncingEnemy.m */,
+				83E1B0FB1552195700D8C32D /* Health.h */,
+				83E1B0FC1552195700D8C32D /* Health.m */,
 				831DA41F1550A5120073D7A5 /* Goal.h */,
 				831DA4201550A5120073D7A5 /* Goal.m */,
 			);
@@ -299,6 +344,13 @@
 				838B2A541551E70A0049EC4A /* start-land.png in Resources */,
 				838B2A561551EEC10049EC4A /* dead-land.png in Resources */,
 				838B2A581551EECA0049EC4A /* won-land.png in Resources */,
+				83E1B0F715520A6800D8C32D /* water1x1.png in Resources */,
+				83E1B0F815520A6800D8C32D /* water4x1.png in Resources */,
+				83E1B0FA1552120D00D8C32D /* pd.png in Resources */,
+				83E1B0FF15521BCB00D8C32D /* health.png in Resources */,
+				83E1B1041552223A00D8C32D /* upset.png in Resources */,
+				83E1B107155223AE00D8C32D /* backdrop.png in Resources */,
+				83E1B108155223AE00D8C32D /* frontdrop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +376,10 @@
 				831DA40F155093600073D7A5 /* ImageGraphics.m in Sources */,
 				831DA4181550987F0073D7A5 /* ImageSetGraphics.m in Sources */,
 				831DA4211550A5130073D7A5 /* Goal.m in Sources */,
+				83E1B0F415520A3E00D8C32D /* Water.m in Sources */,
+				83E1B0FD1552195700D8C32D /* Health.m in Sources */,
+				83E1B1021552213200D8C32D /* Enemy.m in Sources */,
+				83E1B10B155226D100D8C32D /* BouncingEnemy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

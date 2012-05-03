@@ -10,6 +10,8 @@
 #import "BoxGraphics.h"
 #import "ImageGraphics.h"
 #import "ImageSetGraphics.h"
+#import "Level.h"
+#import "Terrain.h"
 
 
 @interface Protag (){
@@ -17,6 +19,7 @@
     float stepLength;
     float stepLengthElapsed;
     BOOL wasJumping;
+    float timeToRecover;
 }
 @end
 
@@ -29,17 +32,27 @@
 
 @synthesize jumpSpeed;
 @synthesize runSpeed;
+@synthesize health;
 
 -(void) simulateWithTimeInterval:(float)tmInt{
     [super simulateWithTimeInterval:tmInt];
     
+    //recovery time
+    if (timeToRecover > 0) {
+        timeToRecover -= tmInt;
+    }
+    
+    //animation
     if(left){
         ((ImageSetGraphics*)self.graphics).flipped = YES;
     }
     else if (right) {
         ((ImageSetGraphics*)self.graphics).flipped = NO;
     }
-    if(grounded){
+    if(self.recovering){
+        ((ImageSetGraphics*)self.graphics).currentIndex = walkCycleLength + 1;
+    }
+    else if(grounded){
         if(wasJumping){
             wasJumping = NO;
             ((ImageSetGraphics*)self.graphics).currentIndex = 0;
@@ -94,6 +107,7 @@
 }
 
 -(void) pushedBy:(Element*)elem inDirection:(int)direc{
+    if( [elem isKindOfClass:Terrain.class]){
     if ( direc == DIR_UP ){
         grounded = 1;
         self.vy = 0.1;
@@ -103,15 +117,18 @@
             self.vy = -self.vy;
         }
     }
+    }
 }
 
 -(id) initWithX:(float)x andY:(float)y{
     self = [super initWithBounds:CGRectMake(x, y, 50, 75)];
     if (self) {
-        self.jumpSpeed = 370;
+        self.jumpSpeed = 400;
         self.runSpeed = 200;
         walkCycleLength = 8;
         stepLength = 7;
+        maxhealth = health = 100;
+        recoveryTime = 0.5;
     }
     return self;
 }
@@ -127,8 +144,29 @@
                      @"p6.png", 
                      @"p7.png", 
                      @"p8.png", 
-                     @"pj.png", nil];
+                     @"pj.png", 
+                     @"pd.png",
+                     nil];
     ((ImageSetGraphics *)self.graphics).currentIndex = 0;
+}
+
+-(BOOL)recovering{
+    return timeToRecover > 0;
+}
+
+-(void) attack:(float)ammount{
+    if (!self.recovering) {
+        self.health -= ammount;
+        timeToRecover = recoveryTime;
+        NSLog(@"ouch %f", self.health);
+        if (health < 0) {
+            [self.mylevel die];
+        }
+    }
+}
+
+-(void) heal:(float)ammount{
+    health = MIN(maxhealth, health+ammount);
 }
 
 @end

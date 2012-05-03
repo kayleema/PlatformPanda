@@ -30,5 +30,6 @@
 -(void) addElement:(Element *) elem;
 
 -(void) reachedGoal;
+-(void) die;
 
 @end

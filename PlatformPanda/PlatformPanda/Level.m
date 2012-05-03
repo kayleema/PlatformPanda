@@ -23,7 +23,7 @@
     if (self){
         elements = [[NSMutableArray alloc] init];
         [self loadElements];
-        gravity = 500.0;
+        gravity = 550.0;
     }
     return self;
 }
@@ -45,8 +45,12 @@
     
     //check protag offscreen
     if (protag.bounds.origin.y > 5000){
-        self.finished = self.dead = YES;
+        [self die];
     }
+}
+
+-(void) die{
+    self.finished = self.dead = YES;
 }
 
 - (void) calculateCollisions{

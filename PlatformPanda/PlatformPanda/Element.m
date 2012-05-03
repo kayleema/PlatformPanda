@@ -25,8 +25,13 @@
     if(self){
         bounds = newbounds;
         [self setupGraphics];
+        [self setup];
     }
     return self;
+}
+
+-(void)setup{
+    
 }
 
 -(void) setupGraphics{

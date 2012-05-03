@@ -10,10 +10,15 @@
 #import "TestLevel1.h"
 #import "Element.h"
 #import "LevelView.h"
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface ViewController (){
-    NSTimer * mytimer;
+    //NSTimer * mytimer;
+    CADisplayLink *displayLink;
     int touchesleft, touchescenter, touchesright;
+    int menutouches;
 }
 
 @end
@@ -45,6 +50,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    
+    [((LevelView*)self.view) loadResources];
     self.state = STATE_MAIN_MENU;
     [self.view setNeedsDisplay];
 }
@@ -54,12 +61,16 @@
 - (void) touchAtX:(float)x andY:(float)y{
     switch (self.state) {
         case STATE_MAIN_MENU:
-            [self loadLevel];
-            [self startGame];
+                [self loadLevel];
+                [self startGame];
             break;
         case STATE_DEAD:
         case STATE_WON:
-            [self stopGame:STATE_MAIN_MENU];
+            menutouches++;
+            if(menutouches >=2){
+                menutouches = 0;
+                [self stopGame:STATE_MAIN_MENU];
+            }
             break;
         default:
             break;
@@ -67,16 +78,16 @@
 }
 
 - (void) startGame{
-    if ([mytimer isValid]) {
-        [mytimer invalidate];
-    }
     self.state = STATE_RUN;
-    mytimer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0) target:self
-                                             selector:@selector(doFrame) userInfo:nil repeats:YES];
+    
+    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(doFrame)];
+    displayLink.frameInterval = 2;
+    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void) stopGame:(int)newstate{
-    [mytimer invalidate];
+    [displayLink invalidate];
+    
     self.state = newstate;
     [self.view setNeedsDisplay];
 }
@@ -86,7 +97,7 @@
 }
 
 - (void)doFrame{
-    float tmInt = 1/60.0;
+    float tmInt = displayLink.duration * displayLink.frameInterval;
     [((LevelView *)self.view) slideScreen: CGPointMake(CGRectGetMidX(level.protag.bounds), 
                                                        CGRectGetMidY(level.protag.bounds)) 
                                   forTime:tmInt];
@@ -185,6 +196,10 @@
         [self touchDecrementNow:touch];
     }
     [self processTouches];
+}
+
+-(float) getHealth{
+    return level.protag.health;
 }
 
 @end

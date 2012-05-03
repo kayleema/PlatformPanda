@@ -13,6 +13,7 @@
     ViewController *viewController;
     CGPoint screenPosition;
     float screenStiffness;
+    UIImage *frontdrop, *backdrop;
 }
 
 @property IBOutlet ViewController * viewController;
@@ -22,5 +23,7 @@
 -(BOOL) isMultipleTouchEnabled;
 
 - (void) slideScreen:(CGPoint)target forTime:(float)tmInt;
+
+-(void) loadResources;
 
 @end
