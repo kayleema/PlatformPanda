@@ -156,11 +156,6 @@
     level.protag.left  = touchesleft   > 0;
     level.protag.right = touchesright  > 0;
     level.protag.up    = touchescenter > 0;
-    if (touchesleft < 0 || touchescenter < 0 || touchesright < 0) {
-        touchesleft = MAX(touchesleft, 0);
-        touchescenter = MAX(touchescenter, 0);
-        touchesright = MAX(touchesright, 0);
-    }
 }
 
 - (void) startMenu{
@@ -173,6 +168,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){
         [self touchIncrement:touch];
+        NSLog(@"Start: %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
 }
@@ -180,12 +176,14 @@
     for (UITouch *touch in touches){
         [self touchIncrement:touch];
         [self touchDecrementPrev:touch];
+        NSLog(@"Moved: %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){
-        [self touchDecrementNow:touch];
+        [self touchDecrementPrev:touch];
+        NSLog(@"End:   %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
     [self touchAtX:[[touches anyObject] locationInView:self.view].x
@@ -193,7 +191,8 @@
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches){
-        [self touchDecrementNow:touch];
+        [self touchDecrementPrev:touch];
+        NSLog(@"Cancl: %i %i %i", touchesleft, touchescenter, touchesright);
     }
     [self processTouches];
 }

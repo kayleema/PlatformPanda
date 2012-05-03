@@ -77,7 +77,15 @@
     
     
     [[UIColor blackColor] setStroke];
-    [[UIColor redColor] setFill];
+    if ([self.viewController getHealth] > 66){
+        [[UIColor greenColor] setFill];
+    }
+    else if ([self.viewController getHealth] > 33){
+        [[UIColor orangeColor] setFill];
+    }
+    else {
+        [[UIColor redColor] setFill];
+    }
     CGContextAddRect(context, CGRectMake(self.bounds.size.width-120, 20, [self.viewController getHealth], 20));
     CGContextFillPath(context);
     CGContextAddRect(context, CGRectMake(self.bounds.size.width-120, 20, 100, 20));

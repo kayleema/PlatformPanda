@@ -14,13 +14,9 @@
 @synthesize jumpspeed;
 
 -(void) pushedBy:(Element*)elem inDirection:(int)direc{
-    if( [elem isKindOfClass:Terrain.class]){
-        if ( direc == DIR_UP ){
-            [self jump];
-        }
-    }
-    else{
-        [super pushedBy:elem inDirection:direc];
+    [super pushedBy:elem inDirection:direc];
+    if ( direc == DIR_UP ){
+        [self jump];
     }
 }
 

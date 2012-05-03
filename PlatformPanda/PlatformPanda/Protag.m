@@ -128,7 +128,7 @@
         walkCycleLength = 8;
         stepLength = 7;
         maxhealth = health = 100;
-        recoveryTime = 0.5;
+        recoveryTime = 0.75;
     }
     return self;
 }
@@ -158,7 +158,6 @@
     if (!self.recovering) {
         self.health -= ammount;
         timeToRecover = recoveryTime;
-        NSLog(@"ouch %f", self.health);
         if (health < 0) {
             [self.mylevel die];
         }
